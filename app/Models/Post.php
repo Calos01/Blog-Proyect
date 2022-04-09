@@ -3,11 +3,13 @@
 namespace App\Models;
 
 use Cviebrock\EloquentSluggable\Sluggable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {//ESTE Slug despues de instalar revisamos su github para copiar el codigo q se encuentra en Updating your Eloquent Models
     use Sluggable;
+    use HasFactory;
     //Esto es para recibir datos de forma masiva
     //solo se recibiran los datos q pusimos en el array hacia el campo en la bd establecido
     protected $fillable=['title','body','iframe','image','user_id',];
