@@ -18,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         //creando solo un usuario administrador
         \App\Models\User::create(['name'=>'Juancito','email'=>'juan@admin.com','password'=>bcrypt('123456')]);
+        //creando posts fake
         \App\Models\Post::factory(24)->create();
 
     }
